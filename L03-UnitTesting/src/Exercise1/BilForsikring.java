@@ -1,5 +1,5 @@
 
-package HandedCode.BilForsikring;
+package Exercise1;
 
 public class BilForsikring {
     private double grundPraemie;
