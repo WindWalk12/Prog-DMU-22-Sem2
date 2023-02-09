@@ -15,36 +15,36 @@ public class BilForsikring {
         grundPraemie = grundPr;
     }
 
-    public double beregnPraemie(int alder, boolean isKvinde, int skadeFrieaer) {
+    public double beregnPraemie(int alder, boolean isKvinde, int skadeFrieAar) {
         double praemie = grundPraemie;
+        double praemieProcent = 1;
         if (praemie == 0) {
             throw new RuntimeException("GrundPraemie har ikke faeet en vaerdi");
         }
         if (alder < 18) {
             throw new RuntimeException("Du er for ung til at tegne en forsikring");
         }
-        if (alder - skadeFrieaer < 18) {
-            throw new RuntimeException("Du kan ikke have kaert skadefri saelaenge");
+        if (alder - skadeFrieAar < 18) {
+            throw new RuntimeException("Du kan ikke have koert skadefri saalaenge");
         }
-        if (skadeFrieaer < 0) {
+        if (skadeFrieAar < 0) {
             throw new RuntimeException("Antal skade frie aer skal vaere positiv");
         }
         if (alder < 25) {
-            praemie = 1.25 * grundPraemie;
+            praemieProcent += 0.25;
         }
         if (isKvinde) {
-            praemie = praemie * 0.95;
+            praemieProcent -= 0.05;
         }
-        if (skadeFrieaer < 3) {
-        } else if (skadeFrieaer < 6) {
-            praemie = praemie * 0.85;
-        } else if (skadeFrieaer < 9) {
-            praemie = praemie * 0.75;
+        if (skadeFrieAar < 3) {
+        } else if (skadeFrieAar < 6) {
+            praemieProcent -= 0.15;
+        } else if (skadeFrieAar < 8) {
+            praemieProcent -= 0.25;
         } else {
-            praemie = praemie * 0.65;
+            praemieProcent -= 0.35;
         }
-        return praemie;
-
+        return praemie * praemieProcent;
     }
 
 }
