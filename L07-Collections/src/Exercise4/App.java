@@ -38,8 +38,6 @@ public class App {
                     }
                 }
             }
-            System.out.println(antalKarakterer);
-            System.out.println(samletKarakterer);
             double gennemsnit = (double)samletKarakterer/(double)antalKarakterer;
             System.out.println(pair.getKey() + ": " + antalKarakterer + " karakter" + ", " + "gennemsnit " + gennemsnit);
         }
