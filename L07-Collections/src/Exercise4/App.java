@@ -1,7 +1,5 @@
 package Exercise4;
 
-import Exercise2.Map.Studerende;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
