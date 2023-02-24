@@ -33,7 +33,7 @@ public class Skole {
                 antalKarakterer++;
             }
         }
-        return alleKarakterer/antalKarakterer;
+        return (double)alleKarakterer/antalKarakterer;
     }
 
     public Studerende findStuderende(int studieNr) {
