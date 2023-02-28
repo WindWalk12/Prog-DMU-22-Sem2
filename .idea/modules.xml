@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/L04-Git/L04-Git.iml" filepath="$PROJECT_DIR$/L04-Git/L04-Git.iml" />
       <module fileurl="file://$PROJECT_DIR$/L07-Collections/L07-Collections.iml" filepath="$PROJECT_DIR$/L07-Collections/L07-Collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/L09-DivideAndConquer/L09-DivideAndConquer.iml" filepath="$PROJECT_DIR$/L09-DivideAndConquer/L09-DivideAndConquer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L10-TimeComplexity/L10-TimeComplexity.iml" filepath="$PROJECT_DIR$/L10-TimeComplexity/L10-TimeComplexity.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Prog-DMU-22-Sem2.iml" filepath="$PROJECT_DIR$/.idea/Prog-DMU-22-Sem2.iml" />
     </modules>
   </component>
