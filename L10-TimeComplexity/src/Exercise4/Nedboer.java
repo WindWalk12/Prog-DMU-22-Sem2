@@ -80,8 +80,8 @@ public class Nedboer {
             }
             if (counterOfNumbers > counterMax) {
                 uge = i + 1;
-                counterMax = counterOfNumbers;
                 uge -= counterMax;
+                counterMax = counterOfNumbers;
             }
         }
         return uge;
