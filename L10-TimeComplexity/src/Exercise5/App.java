@@ -11,47 +11,29 @@ public class App {
     }
 
     public static void belgisk_flag(char[] belgisk_flag) {
-        mergesort(belgisk_flag, 0, belgisk_flag.length - 1);
-    }
-
-    private static void mergesort(char[] list, int l, int h) {
-        if (l < h) {
-            int m = (l + h) / 2;
-            mergesort(list, l, m);
-            mergesort(list, m + 1, h);
-            merge(list, l, m, h);
-        }
-    }
-
-    private static void merge(char[] list, int low, int middle, int high) {
-        ArrayList<Character> temp = new ArrayList<Character>();
-
-        int leftIndex = low;
-        int rightIndex = middle + 1;
-
-        while (leftIndex <= middle && rightIndex <= high) {
-            if (list[leftIndex] <= list[rightIndex]) {
-                temp.add(list[leftIndex]);
-                leftIndex++;
+        int s = 0;
+        int g = 0;
+        int r = 0;
+        for (char c :belgisk_flag) {
+            if (c == 'S') {
+                s++;
+            } else if (c == 'G') {
+                g++;
             } else {
-                temp.add(list[rightIndex]);
-                rightIndex++;
+                r++;
             }
         }
-        while (leftIndex <= middle) {
-            temp.add(list[leftIndex]);
-            leftIndex++;
-        }
-        while (rightIndex <= high) {
-            temp.add(list[rightIndex]);
-            rightIndex++;
-        }
-
-        int i = 0;
-        int j = low;
-        while (i < temp.size()) {
-            list[j] = temp.get(i++);
-            j++;
+        int max = Math.max(s, Math.max(g, r));
+        for (int i = 0; i < max; i++) {
+            if (s > i) {
+                belgisk_flag[i] = 'S';
+            }
+            if (g > i) {
+                belgisk_flag[i + s] = 'G';
+            }
+            if (r > i) {
+                belgisk_flag[i + s + g] = 'R';
+            }
         }
     }
 }
