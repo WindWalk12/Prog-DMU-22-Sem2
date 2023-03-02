@@ -40,7 +40,7 @@ public class Nedboer {
      *
      * @return
      */
-    // O(n^2)
+    // O(n)
     public int bedsteFerieUgerStart(int antal) {
         int min = Integer.MAX_VALUE;
         int uge = -1;
