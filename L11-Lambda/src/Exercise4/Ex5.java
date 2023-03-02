@@ -28,7 +28,9 @@ public class Ex5 {
 			}
 		}
 		 */
+
 		//removeIf(runners, r -> r.getLapTime() >= 40);
+
 		runners.removeIf(r -> r.getLapTime() >= 40);
 		System.out.println(runners);
 		System.out.println();
