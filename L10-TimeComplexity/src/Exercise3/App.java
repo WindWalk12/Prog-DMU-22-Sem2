@@ -9,7 +9,7 @@ public class App {
     }
 
     public static double[] prefixAverage(int[] inputTal) {
-        double[] averageNumbers = new double[7];
+        double[] averageNumbers = new double[inputTal.length];
         int counter = 1;
         int sum = 0;
         for (int i = 0; i < averageNumbers.length; i++) {
