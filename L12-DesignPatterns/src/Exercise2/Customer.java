@@ -71,7 +71,7 @@ public class Customer {
 	}
 
 	public double totalBuyWithDiscount() {
-		return discount.getDiscount(totalBuy());
+		return discount.discount(totalBuy());
 	}
 
 }

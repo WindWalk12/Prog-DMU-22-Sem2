@@ -1,6 +1,6 @@
 package Exercise2;
 
-public class PercentDiscount extends Discount{
+public class PercentDiscount implements Discount {
     private int discountPercentage;
 
     public PercentDiscount(int discountPercentage) {
@@ -8,7 +8,7 @@ public class PercentDiscount extends Discount{
     }
 
     @Override
-    public double getDiscount(double price) {
+    public double discount(double price) {
         return price - (((double) discountPercentage / 100) * price);
     }
 }

@@ -53,9 +53,8 @@ public class App {
         c2.addOrder(o4);
         c2.addOrder(o5);
 
-        PercentDiscount pd1 = new PercentDiscount(15);
-        FixedDiscount fd1 = new FixedDiscount(250, 1000);
-
+        Discount pd1 = new PercentDiscount(15);
+        Discount fd1 = new FixedDiscount(250, 1000);
         c1.setDiscount(pd1);
         c2.setDiscount(fd1);
 

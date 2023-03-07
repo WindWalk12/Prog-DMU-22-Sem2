@@ -1,6 +1,6 @@
 package Exercise2;
 
-public class FixedDiscount extends Discount {
+public class FixedDiscount implements Discount {
     private int fixedDiscount;
     private int discountLimit;
 
@@ -9,9 +9,8 @@ public class FixedDiscount extends Discount {
         this.discountLimit = discountLimit;
     }
 
-
     @Override
-    public double getDiscount(double price) {
+    public double discount(double price) {
         if (price > discountLimit) {
             return price - fixedDiscount;
         }
