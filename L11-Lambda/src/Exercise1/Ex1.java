@@ -25,15 +25,7 @@ public class Ex1 {
 		//findFirst
 		System.out.println(findFirst(persons, p -> p.getAge() == 44));
 		System.out.println(findFirst(persons, p -> p.getName().charAt(0) == 'S'));
-		System.out.println(findFirst(persons, p -> {
-			int count = 0;
-			for (int i = 0; i < p.getName().length(); i++) {
-				if (p.getName().charAt(i) == 'i') {
-					count++;
-				}
-			}
-			return count >= 2;
-		}));
+		System.out.println(findFirst(persons, p -> p.getName().chars().filter(ch -> ch == 'i').count() > 1));
 		System.out.println(findFirst(persons, p -> p.getName().length() == p.getAge()));
 
 		//findAll
