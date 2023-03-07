@@ -18,7 +18,6 @@ public class Salesman implements Observer {
                     bookTitles.add(bt);
                 }
             }
-
         }
         if (bookTitles.size() > 0) {
             System.out.print("Customers has also bought the books: ");
