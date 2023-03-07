@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/L09-DivideAndConquer/L09-DivideAndConquer.iml" filepath="$PROJECT_DIR$/L09-DivideAndConquer/L09-DivideAndConquer.iml" />
       <module fileurl="file://$PROJECT_DIR$/L10-TimeComplexity/L10-TimeComplexity.iml" filepath="$PROJECT_DIR$/L10-TimeComplexity/L10-TimeComplexity.iml" />
       <module fileurl="file://$PROJECT_DIR$/L11-Lambda/L11-Lambda.iml" filepath="$PROJECT_DIR$/L11-Lambda/L11-Lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L12-DesignPatterns/L12-DesignPatterns.iml" filepath="$PROJECT_DIR$/L12-DesignPatterns/L12-DesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Prog-DMU-22-Sem2.iml" filepath="$PROJECT_DIR$/.idea/Prog-DMU-22-Sem2.iml" />
     </modules>
   </component>
