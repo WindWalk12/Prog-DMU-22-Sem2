@@ -47,7 +47,7 @@ public class ObservableBag implements Bag, Iterable<String>, Observable {
 
             @Override
             public String next() {
-                return arrayString[currentIndex] + " " + strings.get(arrayString[currentIndex++]);
+                return arrayString[currentIndex++];
             }
         };
         return it;
