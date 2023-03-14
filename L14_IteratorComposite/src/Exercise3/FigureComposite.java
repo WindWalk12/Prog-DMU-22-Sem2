@@ -25,14 +25,17 @@ public class FigureComposite extends Figure {
 
     }
 
+    @Override
     public void addFigure(Figure f) {
         figures.add(f);
     }
 
+    @Override
     public void removeFigure(Figure f) {
         figures.remove(f);
     }
 
+    @Override
     public Figure getChild(int i) {
         return figures.get(i);
     }
