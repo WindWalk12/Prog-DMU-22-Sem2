@@ -14,7 +14,9 @@
       <module fileurl="file://$PROJECT_DIR$/L12-DesignPatterns/L12-DesignPatterns.iml" filepath="$PROJECT_DIR$/L12-DesignPatterns/L12-DesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/L13_SingletonAdapter/L13_SingletonAdapter.iml" filepath="$PROJECT_DIR$/L13_SingletonAdapter/L13_SingletonAdapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/L14_IteratorComposite/L14_IteratorComposite.iml" filepath="$PROJECT_DIR$/L14_IteratorComposite/L14_IteratorComposite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L15-19_ExamsProject/L15-19_ExamsProject.iml" filepath="$PROJECT_DIR$/L15-19_ExamsProject/L15-19_ExamsProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/L20_LinkedList/L20_LinkedList.iml" filepath="$PROJECT_DIR$/L20_LinkedList/L20_LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L21_Stacks/L21_Stacks.iml" filepath="$PROJECT_DIR$/L21_Stacks/L21_Stacks.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Prog-DMU-22-Sem2.iml" filepath="$PROJECT_DIR$/.idea/Prog-DMU-22-Sem2.iml" />
     </modules>
   </component>
