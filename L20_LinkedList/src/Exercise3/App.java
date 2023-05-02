@@ -13,5 +13,7 @@ public class App {
         System.out.println();
         sll.removeElement("b");
         sll.udskrivElements();
+        System.out.println();
+        sll.udskrivBagfra();
     }
 }
