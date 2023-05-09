@@ -77,25 +77,17 @@ public class CircularArrayDeque implements DequeI{
         return currentSize < 1;
     }
 
-    private void growIfNecessary()
-    {
+    private void growIfNecessary() {
         if (currentSize == elements.length)
         {
-            System.out.println(this);
             Object[] newElements = new Object[2 * elements.length];
             for (int i = 0; i < elements.length; i++)
             {
-                newElements[((newElements.length-(elements.length - (head + 1)) + i) % newElements.length + newElements.length) % newElements.length] = elements[(head + i) % elements.length];
+                newElements[i] = elements[(head + i) % elements.length];
             }
-            head = ((newElements.length-(elements.length - (head + 1))) % newElements.length + newElements.length) % newElements.length;
             elements = newElements;
+            head = 0;
             tail = currentSize;
-            System.out.println(this);
         }
-    }
-
-    @Override
-    public String toString() {
-        return Arrays.toString(elements);
     }
 }
