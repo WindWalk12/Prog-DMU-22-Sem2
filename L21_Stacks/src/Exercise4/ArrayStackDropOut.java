@@ -9,6 +9,9 @@ public class ArrayStackDropOut implements Stack {
 
     @Override
     public void push(Object element) {
+        if (isEmpty() && top != 0) {
+            top = 0;
+        }
         if (top < stackArray.length) {
             stackArray[top] = element;
             top++;
@@ -24,6 +27,9 @@ public class ArrayStackDropOut implements Stack {
         if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
+            if (top == 0) {
+                top = 5;
+            }
             Object o = stackArray[top - 1];
             stackArray[top - 1] = null;
             top--;
@@ -42,7 +48,7 @@ public class ArrayStackDropOut implements Stack {
 
     @Override
     public boolean isEmpty() {
-        return size() < 0;
+        return size() < 1;
     }
 
     @Override
