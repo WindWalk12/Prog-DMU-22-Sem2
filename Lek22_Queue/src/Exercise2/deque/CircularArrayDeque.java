@@ -21,8 +21,8 @@ public class CircularArrayDeque implements DequeI{
     public void addFirst(Object element) {
         growIfNecessary();
         currentSize++;
-        elements[head] = element;
         head = ((head - 1) % elements.length + elements.length) % elements.length;
+        elements[head] = element;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class CircularArrayDeque implements DequeI{
         {
             throw new NoSuchElementException();
         }
-        Object removed = elements[(head + 1) % elements.length];
+        Object removed = elements[head];
         head = (head + 1) % elements.length;
         currentSize--;
         return removed;
@@ -89,5 +89,10 @@ public class CircularArrayDeque implements DequeI{
             head = 0;
             tail = currentSize;
         }
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(elements);
     }
 }
