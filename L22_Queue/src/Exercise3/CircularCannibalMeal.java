@@ -82,15 +82,20 @@ public class CircularCannibalMeal {
 
     // Prints all persons waiting to be served
     public void printPersons() {
-        Node tempNode = head;
-        while (tempNode != null) {
-            System.out.print(tempNode.data.getName() + " ");
-            tempNode = tempNode.next;
+        if (head == null) {
+            System.out.println("No people dancing");
+        } else {
+            Node tempNode = head;
+            while (tempNode != null) {
+                System.out.print(tempNode.data.getName() + " ");
+                tempNode = tempNode.next;
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 
-    public void dance() {
+    public void danceMacabre() {
+        System.out.println("Let the dance begin!");
         eatRandomPerson();
         while (!isEmpty()) {
             eatNextPerson(5);

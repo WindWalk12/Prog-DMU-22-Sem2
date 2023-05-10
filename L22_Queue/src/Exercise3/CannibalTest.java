@@ -204,7 +204,7 @@ class CannibalTest
 
     @Test
     @Order(6)
-    void test_cannibalQueue_dance()
+    void test_cannibalQueue_danceMacabre()
     {
         // --------------------------------------------------
         // ACT & ASSERT
@@ -216,7 +216,7 @@ class CannibalTest
         cannibalQueue.addPerson(p5);
         cannibalQueue.addPerson(p6);
 
-        cannibalQueue.dance();
+        cannibalQueue.danceMacabre();
         assertTrue(cannibalQueue.isEmpty());
     }
 }
