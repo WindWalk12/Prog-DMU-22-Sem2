@@ -106,6 +106,8 @@ class CannibalTest
         cannibalQueue.addPerson(p5);
         cannibalQueue.addPerson(p6);
 
+        cannibalQueue.printPersons();
+
         Person testPerson = cannibalQueue.eatRandomPerson();
         System.out.println(testPerson.getName() + " bliver spist");
         assertFalse(cannibalQueue.contains(testPerson));
@@ -148,6 +150,8 @@ class CannibalTest
         cannibalQueue.addPerson(p4);
         cannibalQueue.addPerson(p5);
         cannibalQueue.addPerson(p6);
+
+        cannibalQueue.printPersons();
 
         Person testPerson = cannibalQueue.eatNextPerson(2);
         System.out.println(testPerson.getName() + " bliver spist");
