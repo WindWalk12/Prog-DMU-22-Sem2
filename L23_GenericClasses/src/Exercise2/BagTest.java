@@ -12,7 +12,8 @@ public class BagTest
     @Before
     public void setUp()
     {
-        bag = new ArrayBag<String>(10);
+        //bag = new ArrayBag<String>(10);
+        bag = new LinkedList<>(10);
         bag.add("Jan");
         bag.add("Per");
         bag.add("Hans");
