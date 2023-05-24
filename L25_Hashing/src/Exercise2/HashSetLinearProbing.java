@@ -27,8 +27,12 @@ public class HashSetLinearProbing {
 	 * @return true if x is an element of this set
 	 */
 	public boolean contains(Object x) {
-		int h = hashValue(x);
-		return buckets[h].equals(x);
+		for (Object bucket : buckets) {
+			if (bucket == x) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -40,9 +44,23 @@ public class HashSetLinearProbing {
 	 */
 	public boolean add(Object x) {
 		int h = hashValue(x);
-		if (buckets[h] == null || buckets[h] == "DELETED") {
+		if (buckets[h] == null || buckets[h] == DELETED) {
 			buckets[h] = x;
+			currentSize++;
 			return true;
+		} else {
+			int index = h + 1;
+			for (int i = 0; i < buckets.length - 1; i++) {
+				if (index == buckets.length) {
+					index = 0;
+				}
+				if (buckets[index] == null || buckets[index] == DELETED) {
+					buckets[index] = x;
+					currentSize++;
+					return true;
+				}
+				index++;
+			}
 		}
 		return false;
 	}
@@ -56,7 +74,13 @@ public class HashSetLinearProbing {
 	 *         element of this set
 	 */
 	public boolean remove(Object x) {
-		// TODO
+		for (int i = 0; i < buckets.length; i++) {
+			if (buckets[i] == x) {
+				buckets[i] = DELETED;
+				currentSize--;
+				return true;
+			}
+		}
 		return false;
 	}
 

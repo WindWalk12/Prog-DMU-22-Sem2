@@ -1,7 +1,5 @@
 package Exercise2;
 
-import HandedCode.HashSetChaining;
-
 /**
  * This program demonstrates the hash set class.
  */
@@ -28,14 +26,14 @@ public class HashSetDemo {
 		System.out.println(names.size());
 		System.out.println(names.contains("Romeo"));
 
-		// names.remove("Romeo");
-		// System.out.println(names.contains("Romeo"));
-		// System.out.println(names.contains("George"));
-		// names.remove("George");
-		// System.out.println(names.size());
-		// System.out.println();
-		// names.writeOut();
-		// System.out.println();
+		names.remove("Romeo");
+		System.out.println(names.contains("Romeo"));
+		System.out.println(names.contains("George"));
+		names.remove("George");
+		System.out.println(names.size());
+		System.out.println();
+		names.writeOut();
+		System.out.println();
 
 	}
 }
