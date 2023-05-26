@@ -140,9 +140,7 @@ public class BinaryTree<E> {
 		if (n == null) {
 			return 0;
 		} else {
-			int leftSize = size(n.left);
-			int rightSize = size(n.right);
-			return leftSize + rightSize + 1;
+			return size(n.left) + size(n.right) + 1;
 		}
 	}
 
@@ -154,13 +152,7 @@ public class BinaryTree<E> {
 		if (n == null) {
 			return 0;
 		} else {
-			int leftSize = height(n.left);
-			int rightSize = height(n.right);
-			if (leftSize >= rightSize) {
-				return leftSize + 1;
-			} else {
-				return rightSize + 1;
-			}
+			return Math.max(height(n.left), height(n.right)) + 1;
 		}
 	}
 
@@ -208,9 +200,7 @@ public class BinaryTree<E> {
 		if (n == null) {
 			return 0;
 		} else {
-			int leftCalc = calcAllNodes(n.left);
-			int rightCalc = calcAllNodes(n.right);
-			return leftCalc + rightCalc + (int) n.data;
+			return calcAllNodes(n.left) + calcAllNodes(n.right) + (int) n.data;
 		}
 	}
 

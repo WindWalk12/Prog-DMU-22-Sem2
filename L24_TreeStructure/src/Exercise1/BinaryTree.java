@@ -140,9 +140,7 @@ public class BinaryTree<E> {
 		if (n == null) {
 			return 0;
 		} else {
-			int leftSize = size(n.left);
-			int rightSize = size(n.right);
-			return leftSize + rightSize + 1;
+			return size(n.left) + size(n.right) + 1;
 		}
 	}
 
