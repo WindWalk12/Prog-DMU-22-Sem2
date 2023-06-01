@@ -7,9 +7,9 @@ import java.util.NoSuchElementException;
 /**
  * An implementation of a queue as a circular array.
  */
-public class SnackQueue
+public class SnackQueue<T>
 {
-    private Snack[] elements;
+    private T[] elements;
     private int currentSize;
     private int head;
     private int tail;
@@ -19,7 +19,7 @@ public class SnackQueue
      */
     public SnackQueue(int size)
     {
-        elements = new Snack[size];
+        elements = (T[]) new Object[size];
         currentSize = 0;
         head = 0;
         tail = 0;
@@ -30,7 +30,7 @@ public class SnackQueue
      * 
      * @param element the element to add
      */
-    public void enqueue(Snack element)
+    public void enqueue(T element)
     {
         growIfNecessary();
         currentSize++;
@@ -43,13 +43,13 @@ public class SnackQueue
      * 
      * @return the removed element
      */
-    public Snack dequeue()
+    public T dequeue()
     {
         if (currentSize == 0)
         {
             throw new NoSuchElementException();
         }
-        Snack removed = elements[head];
+        T removed = elements[head];
         head = (head + 1) % elements.length;
         currentSize--;
         return removed;
@@ -82,7 +82,7 @@ public class SnackQueue
     {
         if (currentSize == elements.length)
         {
-            Snack[] newElements = new Snack[2 * elements.length];
+            T[] newElements = (T[]) new Object[2 * elements.length];
             for (int i = 0; i < elements.length; i++)
             {
                 newElements[i] = elements[(head + i) % elements.length];
