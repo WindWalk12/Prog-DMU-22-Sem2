@@ -1,4 +1,4 @@
-package Generics.HandedCode.queuetest;
+package Generics.Exercise1.queuetest;
 
 
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +12,7 @@ import Generics.Exercise1.snacks.Limb;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @TestMethodOrder(OrderAnnotation.class)
 class QueueTest
 {

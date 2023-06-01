@@ -1,8 +1,8 @@
-package Generics.HandedCode.queue;
+package Generics.Exercise1.queue;
+
+import Generics.Exercise1.snacks.Snack;
 
 import java.util.NoSuchElementException;
-
-import snacks.Snack;
 
 /**
  * An implementation of a queue as a circular array.
