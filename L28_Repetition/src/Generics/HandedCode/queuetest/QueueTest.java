@@ -6,8 +6,8 @@ import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import Generics.Exercise1.queue.SnackQueue;
-import Generics.Exercise1.snacks.Limb;
+import Generics.HandedCode.queue.SnackQueue;
+import Generics.HandedCode.snacks.Limb;
 
 import java.util.NoSuchElementException;
 
